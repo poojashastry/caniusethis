@@ -1,0 +1,39 @@
+{
+    "name": "caniusethis",
+    "displayName": "caniusethis",
+    "description": "Check browser compatibility for HTML5, CSS3 features",
+    "version": "0.0.1",
+    "publisher": "pshastry",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:css",
+        "onLanguage:html"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "keybindings": {
+            "command": "extension.caniuse",
+            "key": "ctrl+alt+w",
+            "mac": "cmd+alt+w"
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "caniuse-api": "^2.0.0"
+    }
+}
